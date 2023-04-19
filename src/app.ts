@@ -15,4 +15,13 @@ app.get("/status", (req: Request, res: Response)=>{
     })
 })
 
+app.post("/send", async (req: Request, res:Response)=>{
+    const {phone, message} = req.body;
+    try {
+        return res.send(await sender.sendText(phone, message));
+    } catch (error) {
+        return res.send({status:400, message: error})
+    }
+})
+
 app.listen(2000);

@@ -1,4 +1,7 @@
 import { Whatsapp, create, Message, SocketState } from "venom-bot";
+import Utils from "./utils";
+
+const utils = new Utils();
 
 export type QrCode = {
     base64Qr: string
@@ -10,11 +13,11 @@ class Sender {
     private connected: boolean;
     private qr: QrCode;
 
-    get isConnected(): boolean{
+    get isConnected(): boolean {
         return this.connected
     }
 
-    get qrCode(): QrCode{
+    get qrCode(): QrCode {
         return this.qr
     }
 
@@ -22,10 +25,25 @@ class Sender {
         this.initialize();
     }
 
+    onMessage = () => {
+        this.client.onMessage((message) => {
+            console.log(message.body)
+        })
+    }
+
+    sendText = async (to:string, message:string) => {
+        let phoneNumber = utils.formatPhone(to);
+        await this.client.sendText(phoneNumber, message).then(()=>{
+            console.log("Mensagem enviada")
+        }).catch((error)=>{
+            console.log(error)
+        })
+    }
+
     //Inicializa uma sessão
     private initialize() {
 
-        const qr = (base64Qr: string, asciiQR:string, attempts: number) => {
+        const qr = (base64Qr: string, asciiQR: string, attempts: number) => {
             this.qr = { base64Qr, attempts }
         }
 
@@ -35,8 +53,8 @@ class Sender {
 
         const start = (client: Whatsapp) => {
             this.client = client;
-
-            client.onStateChange((state)=>{
+            this.onMessage();
+            client.onStateChange((state) => {
                 this.connected = state === SocketState.CONNECTED
             })
         }
