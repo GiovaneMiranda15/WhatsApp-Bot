@@ -1,0 +1,37 @@
+2023/04/19-12:34:57.782 2cc8 Reusing MANIFEST C:\Projetos\JavaScript\Bot WhatsApp\tokens\WhatsApp-Boot\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/04/19-12:34:57.782 2cc8 Recovering log #48
+2023/04/19-12:34:57.786 2cc8 Reusing old log C:\Projetos\JavaScript\Bot WhatsApp\tokens\WhatsApp-Boot\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000048.log 
+2023/04/19-12:34:57.786 2cc8 Delete type=2 #47
+2023/04/19-12:34:57.959 e3c Manual compaction at level-0 from '\x00\x17\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x18\x00\x00\x00' @ 0 : 0; will stop at (end)
+2023/04/19-12:34:57.962 e3c Level-0 table #53: started
+2023/04/19-12:34:57.967 e3c Level-0 table #53: 82169 bytes OK
+2023/04/19-12:34:57.968 e3c Delete type=0 #48
+2023/04/19-12:34:57.969 2cc8 Manual compaction at level-0 from '\x00\x16\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x17\x00\x00\x00' @ 0 : 0; will stop at '\x00\x17.\x02\x01\x0e\x00W\x00A\x00A\x00D\x00V\x00S\x00e\x00c\x00r\x00e\x00t\x00K\x00e\x00y' @ 29518 : 1
+2023/04/19-12:34:57.969 2cc8 Compacting 1@0 + 1@1 files
+2023/04/19-12:34:57.975 2cc8 Generated table #54@0: 4135 keys, 53876 bytes
+2023/04/19-12:34:57.975 2cc8 Compacted 1@0 + 1@1 files => 53876 bytes
+2023/04/19-12:34:57.976 2cc8 compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/04/19-12:34:57.977 2cc8 Delete type=2 #53
+2023/04/19-12:34:57.977 2cc8 Manual compaction at level-0 from '\x00\x17.\x02\x01\x0e\x00W\x00A\x00A\x00D\x00V\x00S\x00e\x00c\x00r\x00e\x00t\x00K\x00e\x00y' @ 29518 : 1 .. '\x00\x17\x00\x00\x00' @ 0 : 0; will stop at (end)
+2023/04/19-12:34:57.979 e3c Level-0 table #56: started
+2023/04/19-12:34:57.982 e3c Level-0 table #56: 509 bytes OK
+2023/04/19-12:34:57.983 e3c Delete type=2 #50
+2023/04/19-12:34:57.983 e3c Delete type=0 #52
+2023/04/19-12:34:57.983 2cc8 Manual compaction at level-0 from '\x00\x15\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x16\x00\x00\x00' @ 0 : 0; will stop at '\x00\x15\x02\x02\x03\x00\x00\x00\x00\x00\x00\xf0?' @ 31390 : 0
+2023/04/19-12:34:57.983 2cc8 Compacting 1@0 + 1@1 files
+2023/04/19-12:34:57.988 2cc8 Generated table #57@0: 4110 keys, 53017 bytes
+2023/04/19-12:34:57.988 2cc8 Compacted 1@0 + 1@1 files => 53017 bytes
+2023/04/19-12:34:57.989 2cc8 compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/04/19-12:34:57.990 2cc8 Delete type=2 #56
+2023/04/19-12:34:57.990 2cc8 Manual compaction at level-0 from '\x00\x15\x02\x02\x03\x00\x00\x00\x00\x00\x00\xf0?' @ 31390 : 0 .. '\x00\x16\x00\x00\x00' @ 0 : 0; will stop at (end)
+2023/04/19-12:34:57.993 e3c Level-0 table #59: started
+2023/04/19-12:34:57.995 e3c Level-0 table #59: 12438 bytes OK
+2023/04/19-12:34:57.996 e3c Delete type=2 #54
+2023/04/19-12:34:57.996 e3c Delete type=0 #55
+2023/04/19-12:34:57.997 e3c Manual compaction at level-0 from '\x00\x14\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x15\x00\x00\x00' @ 0 : 0; will stop at '\x00\x18\x00\x00\x05' @ 31882 : 1
+2023/04/19-12:34:57.997 e3c Compacting 1@0 + 1@1 files
+2023/04/19-12:34:58.001 e3c Generated table #60@0: 3641 keys, 30685 bytes
+2023/04/19-12:34:58.001 e3c Compacted 1@0 + 1@1 files => 30685 bytes
+2023/04/19-12:34:58.002 e3c compacted to: files[ 0 1 1 0 0 0 0 ]
+2023/04/19-12:34:58.002 e3c Delete type=2 #59
+2023/04/19-12:34:58.003 e3c Manual compaction at level-0 from '\x00\x18\x00\x00\x05' @ 31882 : 1 .. '\x00\x15\x00\x00\x00' @ 0 : 0; will stop at (end)
