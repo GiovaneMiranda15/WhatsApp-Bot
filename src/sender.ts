@@ -1,67 +1,43 @@
-import { Whatsapp, create, Message, SocketState } from "venom-bot";
-import Utils from "./utils";
-
-const utils = new Utils();
-
-export type QrCode = {
-    base64Qr: string
-    attempts: number
-}
+import { create } from "venom-bot"
+import Utils from "./utils"
 
 class Sender {
-    private client: Whatsapp;
-    private connected: boolean;
-    private qr: QrCode;
-
-    get isConnected(): boolean {
-        return this.connected
-    }
-
-    get qrCode(): QrCode {
-        return this.qr
-    }
+    private utils = new Utils()
+    private clientSession: any
 
     constructor() {
-        this.initialize();
+        this.initialize()
     }
 
-    onMessage = () => {
-        this.client.onMessage((message) => {
-            console.log(message.body)
+    private async initialize() {
+        create({
+            session: "whatsapp-bot",
         })
-    }
-
-    sendText = async (to:string, message:string) => {
-        let phoneNumber = utils.formatPhone(to);
-        await this.client.sendText(phoneNumber, message).then(()=>{
-            console.log("Mensagem enviada")
-        }).catch((error)=>{
-            console.log(error)
-        })
-    }
-
-    //Inicializa uma sessão
-    private initialize() {
-
-        const qr = (base64Qr: string, asciiQR: string, attempts: number) => {
-            this.qr = { base64Qr, attempts }
-        }
-
-        const status = (statusSession: string) => {
-            this.connected = ["isLogged", "qrReadSuccess", "chatsAvailable"].includes(statusSession);
-        }
-
-        const start = (client: Whatsapp) => {
-            this.client = client;
-            this.onMessage();
-            client.onStateChange((state) => {
-                this.connected = state === SocketState.CONNECTED
+            .then((client) => {
+                this.clientSession = client
+                this.start()
             })
-        }
+            .catch((err) => {
+                console.log(err)
+            })
+    }
 
-        create('WhatsApp-Boot', qr, status)
-            .then((client) => start(client))
-            .catch((erro) => { console.log(erro) });
+    private async start() {
+        this.clientSession.onMessage((message: any) => {
+            console.log("Mensagem recebida:", message.body)
+        })
+    }
+
+    public async send(phoneNumber: any, message: any) {
+        const phoneFormat = this.utils.formatPhone(phoneNumber)
+        this.clientSession
+            .sendText(phoneFormat, message)
+            .then((result: any) => {
+                console.log("Mensagem enviado com sucesso: ", result.text)
+            })
+            .catch((err: any) => {
+                console.log("Falha ao enviar a mensagem: ", err)
+            })
     }
 }
 

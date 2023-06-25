@@ -1,0 +1,472 @@
+Com base no JSON que você compartilhou, aqui está o significado dos principais campos:
+
+- `id`: Identificador único da mensagem.
+- `body`: Corpo da mensagem (texto).
+- `type`: Tipo de mensagem (nesse caso, é "chat" indicando uma mensagem de chat comum).
+- `t`: Timestamp da mensagem (em segundos).
+- `notifyName`: Nome do remetente conforme exibido nas notificações.
+- `from`: ID do remetente (número de telefone ou ID de grupo).
+- `to`: ID do destinatário (seu número de telefone ou ID de grupo).
+- `author`: ID do autor da mensagem.
+- `self`: Indica se a mensagem foi enviada pelo próprio número (valor "in").
+- `ack`: Status de confirmação de leitura da mensagem (1 indica confirmada).
+- `isNewMsg`: Indica se a mensagem é nova.
+- `chatId`: ID da conversa (grupo ou contato individual).
+- `fromMe`: Indica se a mensagem foi enviada pelo usuário atual (valor "true" ou "false").
+- `sender`: Objeto contendo informações sobre o remetente.
+- `timestamp`: Timestamp da mensagem (em segundos, mesmo valor de `t`).
+- `content`: Conteúdo da mensagem (mesmo valor de `body`).
+- `isGroupMsg`: Indica se a mensagem é de um grupo (valor "true" ou "false").
+- `groupInfo`: Objeto contendo informações sobre o grupo (disponível apenas para mensagens de grupo).
+
+Esses são alguns dos campos mais relevantes, mas o JSON completo contém informações adicionais que podem ser úteis dependendo das suas necessidades específicas.
+
+Claro! Aqui estão os demais campos presentes no objeto JSON e seus significados, com base na documentação do Venom:
+
+- `star`: Indica se a mensagem foi marcada como favorita (valor "true" ou "false").
+- `kicNotified`: Indica se o remetente foi notificado sobre a expulsão (valor "true" ou "false").
+- `recvFresh`: Indica se a mensagem foi recebida recentemente (valor "true" ou "false").
+- `streamingSidecar`: Informações relacionadas a streaming de mídia.
+- `waveform`: Formato de onda da mensagem de áudio (se aplicável).
+- `scanLengths`: Duração do scan de mídia.
+- `scansSidecar`: Informações relacionadas ao scan de mídia.
+- `isFromTemplate`: Indica se a mensagem foi enviada a partir de um modelo (valor "true" ou "false").
+- `pollInvalidated`: Indica se a votação da enquete foi invalidada (valor "true" ou "false").
+- `isSentCagPollCreation`: Indica se a criação da enquete foi enviada (valor "true" ou "false").
+- `latestEditMsgKey`: Chave da mensagem mais recente editada.
+- `latestEditSenderTimestampMs`: Timestamp do remetente da mensagem mais recente editada.
+- `broadcast`: Indica se a mensagem é de uma transmissão (valor "true" ou "false").
+- `mentionedJidList`: Lista de JIDs mencionados na mensagem.
+- `groupMentions`: Lista de menções de grupo na mensagem.
+- `hydratedButtons`: Botões hidratados da mensagem.
+- `isVcardOverMmsDocument`: Indica se a mensagem é um cartão de contato em um documento MMS (valor "true" ou "false").
+- `isForwarded`: Indica se a mensagem foi encaminhada (valor "true" ou "false").
+- `hasReaction`: Indica se a mensagem possui reação (valor "true" ou "false").
+- `productHeaderImageRejected`: Indica se a imagem de cabeçalho do produto foi rejeitada (valor "true" ou "false").
+- `lastPlaybackProgress`: Progresso da reprodução da mídia da mensagem.
+- `isDynamicReplyButtonsMsg`: Indica se a mensagem possui botões de resposta dinâmicos (valor "true" ou "false").
+- `dynamicReplyButtons`: Botões de resposta dinâmicos da mensagem.
+- `isMdHistoryMsg`: Indica se a mensagem é uma mensagem de histórico MD (valor "true" ou "false").
+- `stickerSentTs`: Timestamp de envio do adesivo.
+- `isAvatar`: Indica se a mensagem é um avatar (valor "true" ou "false").
+- `requiresDirectConnection`: Indica se a mensagem requer conexão direta (valor "true" ou "false").
+- `mediaData`: Dados da mídia associada à mensagem.
+- `replyButtons`: Botões de resposta da mensagem de resposta.
+- `buttons`: Botões associados à mensagem.
+- `chat`: Informações sobre a conversa (disponível apenas para mensagens de grupo).
+
+Esses são os campos adicionais presentes no objeto JSON retornado pelas APIs do Venom. Cada campo possui um propósito específico e pode conter informações relevantes para processar e manipular as mensagens recebidas.
+
+{
+  id: 'false_556799091438@c.us_4D1F72AD1EE73CBBAD9D6C86D445CFF8',
+  body: '.',
+  type: 'chat',
+  t: 1687652130,
+  notifyName: 'Letícia',
+  from: '556799091438@c.us',
+  to: '556791854075@c.us',
+  self: 'in',
+  ack: 1,
+  isNewMsg: true,
+  star: false,
+  kicNotified: false,
+  recvFresh: true,
+  streamingSidecar: null,
+  waveform: null,
+  scanLengths: null,
+  scansSidecar: null,
+  isFromTemplate: false,
+  pollInvalidated: false,
+  isSentCagPollCreation: false,
+  latestEditMsgKey: null,
+  latestEditSenderTimestampMs: null,
+  broadcast: false,
+  mentionedJidList: [],
+  groupMentions: [],
+  hydratedButtons: null,
+  isVcardOverMmsDocument: false,
+  isForwarded: false,
+  hasReaction: false,
+  productHeaderImageRejected: false,
+  lastPlaybackProgress: 0,
+  isDynamicReplyButtonsMsg: false,
+  dynamicReplyButtons: null,
+  isMdHistoryMsg: false,
+  stickerSentTs: 0,
+  isAvatar: false,
+  requiresDirectConnection: false,
+  chatId: '556799091438@c.us',
+  fromMe: false,
+  sender: {
+    id: '556799091438@c.us',
+    name: 'Maninha❤️',
+    shortName: 'Maninha❤️',
+    pushname: 'Letícia',
+    type: 'in',
+    isBusiness: false,
+    isEnterprise: false,
+    isSmb: false,
+    isContactSyncCompleted: 0,
+    formattedName: 'Maninha❤️',
+    displayName: 'Maninha❤️',
+    formattedShortName: 'Maninha❤️',
+    formattedShortNameWithNonBreakingSpaces: 'Maninha❤️',
+    isMe: false,
+    mentionName: 'Maninha❤️',
+    notifyName: 'Letícia',
+    isMyContact: true,
+    isPSA: false,
+    isUser: true,
+    isWAContact: true,
+    profilePicThumbObj: { id: '556799091438@c.us', tag: '' },
+    msgs: null
+  },
+  timestamp: 1687652130,
+  content: '.',
+  chat: {},
+  mediaData: {},
+  replyButtons: null,
+  buttons: null,
+  isGroupMsg: false,
+  groupInfo: null
+}
+{
+  id: 'false_556799091438@c.us_37793C1B53CF0CF9D5F9497BB399DB78',
+  body: '/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4hIR4qLSgtKj04MzM4PV1CR0JHQl2NWGdYWGdYjX2Xe3N7l33gsJycsOD/2c7Z//////////////8BGxsbGxwbHiEhHiotKC0qPTgzMzg9XUJHQkdCXY1YZ1hYZ1iNfZd7c3uXfeCwnJyw4P/Zztn////////////////CABEIADoAPgMBIgACEQEDEQH/xAAwAAACAwEBAAAAAAAAAAAAAAAEBQABAgMGAQADAQEAAAAAAAAAAAAAAAAAAQIDBP/aAAwDAQACEAMQAAAA9LWhB8L40g6c7aIDIHVsPLv/AC07XMSdepgEJYMvPvKjimKEna94MQHXbAYbqynDDTW9OZRh1AS07gJBvSLSv//EACsQAAEDAgQGAQQDAAAAAAAAAAEAAhEDBAUSIXITFTE0QVFTFCAiMlJicf/aAAgBAQABPwCz7WjtVV2VqN20A66qjccVszCk+1LvaoOOeCVjXbs3Kz7WjtVc5iRPROpNfUJ06L6Vmn5rMAABCB/xMMOCxvt2blaGLSltV3VdUuHwU5zwepWZ/wDIrMZ0cVADJzmVZVnC4aC6QVjXbs3IVOFhzXf0Tj1d5WvVSiEQ9vVUi5lVhPtYsZtKKu6sWNBnsJ0TC1hcN37RooMT4WYlZpKvH58Poq4qZjSHhrUTJR6BMc00g2VVgODfATw3wjwsuk5k9+awaPT0zD+LTpvDAZauWO+Jq5W/4mrlNT0uUrlS5XuV3bG3odDBcrLtaO378b7dm5f/xAAcEQACAQUBAAAAAAAAAAAAAAAAARECEDFBUSH/2gAIAQIBAT8AJJHhlWjyywx5FZbIRC4QuDSg/8QAIBEAAgICAQUBAAAAAAAAAAAAAQIAEQMSIhMhMUFSMv/aAAgBAwEBPwA+TKlGY/2sxDu5lPY5epVhbaNXUxsJjWlmQlQCB7MDVoNPMPIKdapoXYE8jN3+jOo/0YjuWUFjP//Z',
+  type: 'image',
+  t: 1687652196,
+  notifyName: 'Letícia',
+  from: '556799091438@c.us',
+  to: '556791854075@c.us',
+  self: 'in',
+  ack: 1,
+  isNewMsg: true,
+  star: false,
+  kicNotified: false,
+  recvFresh: true,
+  interactiveAnnotations: [],
+  deprecatedMms3Url: 'https://mmg.whatsapp.net/v/t62.7118-24/27332869_313030847724087_4447871188729161876_n.enc?ccb=11-4&oh=01_AdTPf1RIJetBcS-V50cD9Z8EEety0iZ5VS-qp-AkIzXJxw&oe=64BEDD13&mms3=true',
+  directPath: '/v/t62.7118-24/27332869_313030847724087_4447871188729161876_n.enc?ccb=11-4&oh=01_AdTPf1RIJetBcS-V50cD9Z8EEety0iZ5VS-qp-AkIzXJxw&oe=64BEDD13',
+  mimetype: 'image/jpeg',
+  filehash: '6Vu+N6/hVwVpehKGRdDRo7COdS4EbzRJ/PQIRjHcK+E=',
+  encFilehash: 'w6Ipn8TkkJPpwJQYMVpr/SeQjAqIBavY+9SVBC3pUTY=',
+  size: 106999,
+  streamingSidecar: null,
+  mediaKey: 'RDnu2QK6uSb7ju23+TAJ5behMu0Q5Hy2IvSw3h7mryA=',
+  mediaKeyTimestamp: 1687652195,
+  isViewOnce: false,
+  width: 994,
+  height: 926,
+  waveform: null,
+  staticUrl: '',
+  scanLengths: null,
+  scansSidecar: null,
+  isFromTemplate: false,
+  pollInvalidated: false,
+  isSentCagPollCreation: false,
+  latestEditMsgKey: null,
+  latestEditSenderTimestampMs: null,
+  broadcast: false,
+  mentionedJidList: [],
+  groupMentions: [],
+  hydratedButtons: null,
+  isVcardOverMmsDocument: false,
+  isForwarded: false,
+  hasReaction: false,
+  productHeaderImageRejected: false,
+  lastPlaybackProgress: 0,
+  isDynamicReplyButtonsMsg: false,
+  dynamicReplyButtons: null,
+  isMdHistoryMsg: false,
+  stickerSentTs: 0,
+  isAvatar: false,
+  requiresDirectConnection: false,
+  chatId: '556799091438@c.us',
+  fromMe: false,
+  sender: {
+    id: '556799091438@c.us',
+    name: 'Maninha❤️',
+    shortName: 'Maninha❤️',
+    pushname: 'Letícia',
+    type: 'in',
+    isBusiness: false,
+    isEnterprise: false,
+    isSmb: false,
+    isContactSyncCompleted: 0,
+    formattedName: 'Maninha❤️',
+    displayName: 'Maninha❤️',
+    formattedShortName: 'Maninha❤️',
+    formattedShortNameWithNonBreakingSpaces: 'Maninha❤️',
+    isMe: false,
+    mentionName: 'Maninha❤️',
+    notifyName: 'Letícia',
+    isMyContact: true,
+    isPSA: false,
+    isUser: true,
+    isWAContact: true,
+    profilePicThumbObj: { id: '556799091438@c.us' },
+    msgs: null
+  },
+  timestamp: 1687652196,
+  content: '/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4hIR4qLSgtKj04MzM4PV1CR0JHQl2NWGdYWGdYjX2Xe3N7l33gsJycsOD/2c7Z//////////////8BGxsbGxwbHiEhHiotKC0qPTgzMzg9XUJHQkdCXY1YZ1hYZ1iNfZd7c3uXfeCwnJyw4P/Zztn////////////////CABEIADoAPgMBIgACEQEDEQH/xAAwAAACAwEBAAAAAAAAAAAAAAAEBQABAgMGAQADAQEAAAAAAAAAAAAAAAAAAQIDBP/aAAwDAQACEAMQAAAA9LWhB8L40g6c7aIDIHVsPLv/AC07XMSdepgEJYMvPvKjimKEna94MQHXbAYbqynDDTW9OZRh1AS07gJBvSLSv//EACsQAAEDAgQGAQQDAAAAAAAAAAEAAhEDBAUSIXITFTE0QVFTFCAiMlJicf/aAAgBAQABPwCz7WjtVV2VqN20A66qjccVszCk+1LvaoOOeCVjXbs3Kz7WjtVc5iRPROpNfUJ06L6Vmn5rMAABCB/xMMOCxvt2blaGLSltV3VdUuHwU5zwepWZ/wDIrMZ0cVADJzmVZVnC4aC6QVjXbs3IVOFhzXf0Tj1d5WvVSiEQ9vVUi5lVhPtYsZtKKu6sWNBnsJ0TC1hcN37RooMT4WYlZpKvH58Poq4qZjSHhrUTJR6BMc00g2VVgODfATw3wjwsuk5k9+awaPT0zD+LTpvDAZauWO+Jq5W/4mrlNT0uUrlS5XuV3bG3odDBcrLtaO378b7dm5f/xAAcEQACAQUBAAAAAAAAAAAAAAAAARECEDFBUSH/2gAIAQIBAT8AJJHhlWjyywx5FZbIRC4QuDSg/8QAIBEAAgICAQUBAAAAAAAAAAAAAQIAEQMSIhMhMUFSMv/aAAgBAwEBPwA+TKlGY/2sxDu5lPY5epVhbaNXUxsJjWlmQlQCB7MDVoNPMPIKdapoXYE8jN3+jOo/0YjuWUFjP//Z',
+  chat: {},
+  mediaData: {
+    type: 'image',
+    mediaStage: 'FETCHING',
+    size: 106999,
+    filehash: '6Vu+N6/hVwVpehKGRdDRo7COdS4EbzRJ/PQIRjHcK+E=',
+    mimetype: 'image/jpeg',
+    mediaBlob: null,
+    fullHeight: 926,
+    fullWidth: 994,
+    aspectRatio: 1.0734341252699784,
+    animationDuration: 0,
+    animatedAsNewMsg: false,
+    isViewOnce: false,
+    staticUrl: '',
+    preview: {
+      _retainCount: 1,
+      _inAutoreleasePool: false,
+      released: false,
+      _b64: '/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEABsbGxscGx4hIR4qLSgtKj04MzM4PV1CR0JHQl2NWGdYWGdYjX2Xe3N7l33gsJycsOD/2c7Z//////////////8BGxsbGxwbHiEhHiotKC0qPTgzMzg9XUJHQkdCXY1YZ1hYZ1iNfZd7c3uXfeCwnJyw4P/Zztn////////////////CABEIADoAPgMBIgACEQEDEQH/xAAwAAACAwEBAAAAAAAAAAAAAAAEBQABAgMGAQADAQEAAAAAAAAAAAAAAAAAAQIDBP/aAAwDAQACEAMQAAAA9LWhB8L40g6c7aIDIHVsPLv/AC07XMSdepgEJYMvPvKjimKEna94MQHXbAYbqynDDTW9OZRh1AS07gJBvSLSv//EACsQAAEDAgQGAQQDAAAAAAAAAAEAAhEDBAUSIXITFTE0QVFTFCAiMlJicf/aAAgBAQABPwCz7WjtVV2VqN20A66qjccVszCk+1LvaoOOeCVjXbs3Kz7WjtVc5iRPROpNfUJ06L6Vmn5rMAABCB/xMMOCxvt2blaGLSltV3VdUuHwU5zwepWZ/wDIrMZ0cVADJzmVZVnC4aC6QVjXbs3IVOFhzXf0Tj1d5WvVSiEQ9vVUi5lVhPtYsZtKKu6sWNBnsJ0TC1hcN37RooMT4WYlZpKvH58Poq4qZjSHhrUTJR6BMc00g2VVgODfATw3wjwsuk5k9+awaPT0zD+LTpvDAZauWO+Jq5W/4mrlNT0uUrlS5XuV3bG3odDBcrLtaO378b7dm5f/xAAcEQACAQUBAAAAAAAAAAAAAAAAARECEDFBUSH/2gAIAQIBAT8AJJHhlWjyywx5FZbIRC4QuDSg/8QAIBEAAgICAQUBAAAAAAAAAAAAAQIAEQMSIhMhMUFSMv/aAAgBAwEBPwA+TKlGY/2sxDu5lPY5epVhbaNXUxsJjWlmQlQCB7MDVoNPMPIKdapoXYE8jN3+jOo/0YjuWUFjP//Z',
+      _mimetype: 'image/jpeg'
+    },
+    _swStreamingSupported: false,
+    _listeningToSwSupport: false,
+    isVcardOverMmsDocument: false,
+    waveform: null
+  },
+  replyButtons: null,
+  buttons: null,
+  isGroupMsg: false,
+  groupInfo: null
+}
+{
+  id: 'false_556799091438@c.us_F71132B482BD093A10E558941F66BDC4',
+  type: 'ptt',
+  t: 1687652209,
+  notifyName: 'Letícia',
+  from: '556799091438@c.us',
+  to: '556791854075@c.us',
+  self: 'in',
+  ack: 1,
+  isNewMsg: true,
+  star: false,
+  kicNotified: false,
+  recvFresh: true,
+  deprecatedMms3Url: 'https://mmg.whatsapp.net/v/t62.7117-24/18889407_769813448024950_8942878496743359214_n.enc?ccb=11-4&oh=01_AdTrX4dS7-xMME8_q9gGa7kdZXlrvq3MTC6_NWErjAoukA&oe=64BEF95E&mms3=true',
+  directPath: '/v/t62.7117-24/18889407_769813448024950_8942878496743359214_n.enc?ccb=11-4&oh=01_AdTrX4dS7-xMME8_q9gGa7kdZXlrvq3MTC6_NWErjAoukA&oe=64BEF95E',
+  mimetype: 'audio/ogg; codecs=opus',
+  duration: '11',
+  filehash: 'fOuNeGCcl/nOqxwp0O3Qk7kfMY5uqIKt3DS0J0cQUiQ=',
+  encFilehash: 'LLOpH7zv1oluJPQZK+0ZKNBFYuZ8CIh/01hUsCzMCLU=',
+  size: 24189,
+  streamingSidecar: null,
+  mediaKey: 'yK583vqoMz8vfJPOI6e0IraopiXICGzqBjAtzurKCaQ=',
+  mediaKeyTimestamp: 1687652198,
+  waveform: null,
+  scanLengths: null,
+  scansSidecar: null,
+  isFromTemplate: false,
+  pollInvalidated: false,
+  isSentCagPollCreation: false,
+  latestEditMsgKey: null,
+  latestEditSenderTimestampMs: null,
+  broadcast: false,
+  mentionedJidList: [],
+  groupMentions: [],
+  hydratedButtons: null,
+  isVcardOverMmsDocument: false,
+  isForwarded: false,
+  hasReaction: false,
+  productHeaderImageRejected: false,
+  lastPlaybackProgress: 0,
+  isDynamicReplyButtonsMsg: false,
+  dynamicReplyButtons: null,
+  isMdHistoryMsg: false,
+  stickerSentTs: 0,
+  isAvatar: false,
+  requiresDirectConnection: false,
+  chatId: '556799091438@c.us',
+  fromMe: false,
+  sender: {
+    id: '556799091438@c.us',
+    name: 'Maninha❤️',
+    shortName: 'Maninha❤️',
+    pushname: 'Letícia',
+    type: 'in',
+    isBusiness: false,
+    isEnterprise: false,
+    isSmb: false,
+    isContactSyncCompleted: 0,
+    formattedName: 'Maninha❤️',
+    displayName: 'Maninha❤️',
+    formattedShortName: 'Maninha❤️',
+    formattedShortNameWithNonBreakingSpaces: 'Maninha❤️',
+    isMe: false,
+    mentionName: 'Maninha❤️',
+    notifyName: 'Letícia',
+    isMyContact: true,
+    isPSA: false,
+    isUser: true,
+    isWAContact: true,
+    profilePicThumbObj: { id: '556799091438@c.us' },
+    msgs: null
+  },
+  timestamp: 1687652209,
+  chat: {},
+  mediaData: {
+    type: 'ptt',
+    mediaStage: 'FETCHING',
+    size: 24189,
+    filehash: 'fOuNeGCcl/nOqxwp0O3Qk7kfMY5uqIKt3DS0J0cQUiQ=',
+    mimetype: 'audio/ogg; codecs=opus',
+    mediaBlob: null,
+    animationDuration: 0,
+    animatedAsNewMsg: false,
+    duration: '11',
+    _swStreamingSupported: false,
+    _listeningToSwSupport: false,
+    isVcardOverMmsDocument: false,
+    waveform: null
+  },
+  replyButtons: null,
+  buttons: null,
+  isGroupMsg: false,
+  groupInfo: null
+}
+{
+  id: 'false_120363046556644703@g.us_5B684CEBC5E781D7960DEF9E5993FDD9_556781762618@c.us',
+  body: 'Blz',
+  type: 'chat',
+  t: 1687652495,
+  notifyName: 'Diogo Perez',
+  from: '120363046556644703@g.us',
+  to: '556791854075@c.us',
+  author: '556781762618@c.us',
+  self: 'in',
+  ack: 1,
+  isNewMsg: true,
+  star: false,
+  kicNotified: false,
+  recvFresh: true,
+  streamingSidecar: null,
+  waveform: null,
+  scanLengths: null,
+  scansSidecar: null,
+  isFromTemplate: false,
+  pollInvalidated: false,
+  isSentCagPollCreation: false,
+  latestEditMsgKey: null,
+  latestEditSenderTimestampMs: null,
+  broadcast: false,
+  mentionedJidList: [],
+  groupMentions: [],
+  hydratedButtons: null,
+  isVcardOverMmsDocument: false,
+  isForwarded: false,
+  hasReaction: false,
+  productHeaderImageRejected: false,
+  lastPlaybackProgress: 0,
+  isDynamicReplyButtonsMsg: false,
+  dynamicReplyButtons: null,
+  isMdHistoryMsg: false,
+  stickerSentTs: 0,
+  isAvatar: false,
+  requiresDirectConnection: false,
+  chatId: '120363046556644703@g.us',
+  fromMe: false,
+  sender: {
+    id: '556781762618@c.us',
+    name: 'Diogo',
+    shortName: 'Diogo',
+    pushname: 'Diogo Perez',
+    type: 'in',
+    isBusiness: false,
+    isEnterprise: false,
+    isSmb: false,
+    isContactSyncCompleted: 0,
+    formattedName: 'Diogo',
+    displayName: 'Diogo',
+    formattedShortName: 'Diogo',
+    formattedShortNameWithNonBreakingSpaces: 'Diogo',
+    isMe: false,
+    mentionName: 'Diogo',
+    notifyName: 'Diogo Perez',
+    isMyContact: true,
+    isPSA: false,
+    isUser: true,
+    isWAContact: true,
+    profilePicThumbObj: {
+      eurl: 'https://pps.whatsapp.net/v/t61.24694-24/354204269_166707326388434_7803071227589493237_n.jpg?ccb=11-4&oh=01_AdTZ24u2DVsr6VxtjZ_asy0YVQIUn-5PdENtdHspe6lvmw&oe=64A48DA4',
+      id: '556781762618@c.us',
+      img: 'https://pps.whatsapp.net/v/t61.24694-24/354204269_166707326388434_7803071227589493237_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_AdRRzGAI6iCF1C7NSfqz2ZKkUXNexNvAEYIvqHArpiC9BQ&oe=64A48DA4',
+      imgFull: 'https://pps.whatsapp.net/v/t61.24694-24/354204269_166707326388434_7803071227589493237_n.jpg?ccb=11-4&oh=01_AdTZ24u2DVsr6VxtjZ_asy0YVQIUn-5PdENtdHspe6lvmw&oe=64A48DA4',
+      tag: '1687485094'
+    },
+    msgs: null
+  },
+  timestamp: 1687652495,
+  content: 'Blz',
+  chat: {},
+  mediaData: {},
+  replyButtons: null,
+  buttons: null,
+  isGroupMsg: true,
+  groupInfo: {
+    id: '120363046556644703@g.us',
+    name: 'Sistema Pax Devs',
+    type: 'in',
+    isBusiness: false,
+    isEnterprise: false,
+    isSmb: false,
+    formattedName: 'Sistema Pax Devs',
+    displayName: 'Sistema Pax Devs',
+    formattedShortName: 'Sistema Pax Devs',
+    formattedShortNameWithNonBreakingSpaces: 'Sistema Pax Devs',
+    isMe: false,
+    mentionName: 'Sistema Pax Devs',
+    isMyContact: false,
+    isPSA: false,
+    isUser: false,
+    isWAContact: false,
+    profilePicThumbObj: { id: '120363046556644703@g.us', img: null, imgFull: null },
+    msgs: null
+  }
+}
+
+Mensagem enviada com sucesso:  {
+  me: {
+    id: {
+      server: 'c.us',
+      user: '556791854075',
+      _serialized: '556791854075@c.us'
+    },
+    displayName: 'Giovane',
+    verifiedName: null,
+    searchName: 'eu (voce)',
+    pushname: null,
+    notifyName: null,
+    isBusiness: null,
+    formattedUser: 'Eu',
+    tag: '1670023337',
+    eurl: 'https://pps.whatsapp.net/v/t61.24694-24/315424655_3241626816106071_2506061471180696819_n.jpg?ccb=11-4&oh=01_AdREnMZxDSgYwQgvX7UTMrq5DxOFPlUVPj035LSDB6Yg-Q&oe=64A49BB4',
+    previewEurl: 'https://pps.whatsapp.net/v/t61.24694-24/315424655_3241626816106071_2506061471180696819_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_AdQV3KNgoxxQLjG92peQ3y_zdH8OWBbhdsQD0EyCJdgBXA&oe=64A49BB4',
+    stale: false,
+    eurlStale: false,
+    timestamp: 1687655163903
+  },
+  to: {
+    fromMe: true,
+    remote: {
+      server: 'c.us',
+      user: '556799091438',
+      _serialized: '556799091438@c.us'
+    },
+    id: 'XQVMZDURBSS48OLS',
+    _serialized: 'true_556799091438@c.us_XQVMZDURBSS48OLS'
+  },
+  erro: false,
+  text: 'Te amo',
+  status: 'OK'
+}
